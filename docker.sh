@@ -28,3 +28,13 @@ sudo chmod +x /usr/local/bin/docker-compose
  
 echo "check docker status"
 sudo systemctl status docker
+
+echo "remove perm"
+sudo usermod -aG docker ubuntu && su - ubuntu
+
+echo "Confirm"
+id -nG
+
+echo "Exit machine"
+exit
+

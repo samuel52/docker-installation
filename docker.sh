@@ -35,6 +35,9 @@ sudo usermod -aG docker ubuntu && su - ubuntu
 echo "Confirm"
 id -nG
 
+echo "Remove sudo right"
+sudo gpasswd -a $USER docker
+
 echo "Exit machine"
 exit
 
